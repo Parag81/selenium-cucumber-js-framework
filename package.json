@@ -1,0 +1,19 @@
+{
+  "name": "selenium-cucumber-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js features/**/*.feature --require step-definitions/**/*.js"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@cucumber/cucumber": "^13.0.0",
+    "chromedriver": "^149.0.3",
+    "selenium-webdriver": "^4.45.0"
+  }
+}
