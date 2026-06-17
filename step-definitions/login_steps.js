@@ -8,7 +8,7 @@ const { createDriver } = require("../utils/driver_factory");
 
 let driver;
 
-Given("user is on login page",
+Given(/User is on the login page$/,
     async function () {
 
         driver = await createDriver();
@@ -18,25 +18,26 @@ Given("user is on login page",
         );
     });
 
-Given("user enters valid credentials",
-    async function () {
+Given(/Enter the credentials to login as (.*)$/,
+    async function (login) {
 
-        const loginPage =
+        const credentials = JSON.parse(login);
+        const login_page =
             new LoginPage(driver);
 
-        await loginPage.login(
-            "standard_user",
-            "secret_sauce"
+        await login_page.clearLoginField();
+
+        await login_page.login(
+            credentials.username,
+            credentials.password,
         );
 
         console.log("Login successful");
 });
 
-Given("user should be logged in",
+Given(/Validate the user is logged in$/,
     async function () {
-
-        const url =
-            await driver.getCurrentUrl();
+        const url = await driver.getCurrentUrl();
 
         console.log(url);
 
@@ -45,7 +46,20 @@ Given("user should be logged in",
             "https://www.saucedemo.com/inventory.html"
         )
 
-        console.log("URL mactches");
+        console.log("URL matches");
 
-        await driver.quit();
     });
+
+Given(/Validate the error on the Login page with "(.*)"$/,
+    async function (expected_error) {
+            const login_page = await new LoginPage(driver);
+            const error = await driver.findElement(await login_page.error);
+            assert.strictEqual(
+                await error.getText(),
+                expected_error
+            );
+    });
+
+Given(/Close the driver$/, async function () {
+   await driver.quit();
+});

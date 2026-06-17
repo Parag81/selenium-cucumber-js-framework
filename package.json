@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js features/**/*.feature --require step-definitions/**/*.js"
+    "test": "cucumber-js features/**/*.feature --require step-definitions/**/*.js",
+    "wdio": "wdio run ./wdio.conf.ts"
   },
   "private": true,
   "keywords": [],
@@ -15,5 +16,9 @@
     "@cucumber/cucumber": "^13.0.0",
     "chromedriver": "^149.0.3",
     "selenium-webdriver": "^4.45.0"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.28.0",
+    "@wdio/local-runner": "^9.28.0"
   }
 }
