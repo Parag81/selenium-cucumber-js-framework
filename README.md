@@ -21,16 +21,22 @@ Features:
 ## Project Structure
 
 ```text
-project-root
+selenium-cucumber-js-framework
 │
 ├── features
-│   └── login.feature
+│   ├── login.feature
+│   └── inventory.feature
 │
 ├── step-definitions
-│   └── login_steps.js
+│   ├── login_steps.js
+│   └── inventory_steps.js
 │
 ├── pages
-│   └── login_page.js
+│   ├── login_page.js
+│   └── inventory_page.js
+│
+├── support
+│   └── hooks.js
 │
 ├── utils
 │   └── driver_factory.js
@@ -39,7 +45,8 @@ project-root
 │
 ├── screenshots
 │
-└── package.json
+├── package.json
+└── README.md
 ```
 
 ## Test Scenarios
@@ -54,7 +61,8 @@ project-root
 
 - Verify Product Listing
 - Verify Product Details
-- Verify Product Filters
+- Verify Product Sorting
+- Verify Product Count
 
 
 ## Installation
@@ -79,6 +87,37 @@ npx cucumber-js
 
 This framework follows the Page Object Model (POM) design pattern to improve code reusability, maintainability, and scalability.
 
+## Framework Components
+
+### Feature Files
+Contains BDD scenarios written using Gherkin syntax.
+
+- login.feature
+- inventory.feature
+
+### Step Definitions
+Maps Gherkin steps to automation code.
+
+- login_steps.js
+- inventory_steps.js
+
+### Page Objects
+Contains locators and reusable methods following the Page Object Model (POM).
+
+- login_page.js
+- inventory_page.js
+
+### Hooks
+Handles framework setup and teardown activities.
+
+- Browser initialization
+- Browser cleanup
+- Pre and post test execution activities
+
+### Utilities
+Reusable helper classes and browser configuration.
+
+- driver_factory.js
 
 ## Future Enhancements
 
