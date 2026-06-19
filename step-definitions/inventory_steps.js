@@ -33,3 +33,13 @@ Given(/Validate that the price for item (.*) is (.*)$/,
                     }
             }
     })
+
+Given(/Sort the Inventory list with filter (NAME_ASC|NAME_DESC|PRICE_ASC|PRICE_DESC) and validate the list$/,
+    async function (filter_type)  {
+        const inventory_page = new InventoryPage(this.driver);
+        await inventory_page.applyFilters(filter_type);
+        if(!await inventory_page.validateListAsPerFilters(filter_type)){
+            throw new Error(`The list is not sorted as per filter ${filter_type}`);
+        }
+        await this.driver.sleep(1000);
+    })
