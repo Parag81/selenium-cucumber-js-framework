@@ -26,14 +26,17 @@ selenium-cucumber-js-framework
 ├── features
 │   ├── login.feature
 │   └── inventory.feature
+│   └── cart.feature
 │
 ├── step-definitions
 │   ├── login_steps.js
 │   └── inventory_steps.js
+│   └── cart_steps.js
 │
 ├── pages
 │   ├── login_page.js
 │   └── inventory_page.js
+│   └── cart.js
 │
 ├── support
 │   └── hooks.js
@@ -63,6 +66,12 @@ selenium-cucumber-js-framework
 - Verify Product Details
 - Verify Product Sorting
 - Verify Product Count
+- Add Product to Cart
+- Verify Cart Count
+
+### Cart Module
+
+- Verify Products are Added in Cart
 
 
 ## Installation
@@ -94,18 +103,21 @@ Contains BDD scenarios written using Gherkin syntax.
 
 - login.feature
 - inventory.feature
+- cart.feature
 
 ### Step Definitions
 Maps Gherkin steps to automation code.
 
 - login_steps.js
 - inventory_steps.js
+- cart_steps.js
 
 ### Page Objects
 Contains locators and reusable methods following the Page Object Model (POM).
 
 - login_page.js
 - inventory_page.js
+- cart_page.js
 
 ### Hooks
 Handles framework setup and teardown activities.
