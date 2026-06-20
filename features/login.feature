@@ -3,6 +3,7 @@ Feature: Login in the website and validate the Login scenarios
     * User is on the login page
     * Enter the credentials to login as {"username": "standard_user", "password": "secret_sauce"}
     * Validate the user is logged in
+    * Logout
 
   Scenario: Validate the Scenarios for Invalid Username and Password
     * User is on the login page

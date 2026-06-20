@@ -43,3 +43,29 @@ Given(/Sort the Inventory list with filter (NAME_ASC|NAME_DESC|PRICE_ASC|PRICE_D
         }
         await this.driver.sleep(1000);
     })
+
+Given(/Add the item "(.*)" in the cart$/,
+    async function (item)  {
+        const inventory_page = new InventoryPage(this.driver);
+        await inventory_page.addToCart(item);
+    })
+
+Given(/Validate the cart count in Inventory page as (.*)$/,
+    async function (expected_count)  {
+        const inventory_page = new InventoryPage(this.driver);
+        const actual_count = await inventory_page.getCartCount();
+        assert.strictEqual(expected_count, actual_count);
+    })
+
+Given(/Open shopping cart$/,
+    async function ()  {
+        const inventory_page = new InventoryPage(this.driver);
+        await inventory_page.clickCartLink();
+        await this.driver.sleep(1000);
+    })
+
+Given(/Logout$/,
+    async function ()  {
+        const inventory_page = new InventoryPage(this.driver);
+        await inventory_page.logout();
+    })

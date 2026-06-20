@@ -6,11 +6,34 @@ class InventoryPage{
         this.items = By.css("div.inventory_list div.inventory_item");
         this.filters = By.css("select.product_sort_container");
         this.filter_options = By.css("select.product_sort_container option");
+        this.cart_link = By.css("a.shopping_cart_link");
+        this.cart_count = By.css("a.shopping_cart_link span");
+        this.menu_button = By.css("button#react-burger-menu-btn");
+        this.logout_button = By.css("a#logout_sidebar_link");
+    }
+
+    async clickMenuButton(){
+        await this.driver.findElement(this.menu_button).click();
+        await this.driver.sleep(1000);
     }
 
     async getItemsCount() {
         const items = await this.driver.findElements(this.items);
         return items.length;
+    }
+
+    async logout(){
+        await this.clickMenuButton();
+        await this.driver.findElement(this.logout_button).click();
+    }
+
+    async getCartCount() {
+        const cart_count1 = await this.driver.findElement(this.cart_count);
+        return cart_count1.getText();
+    }
+
+    async clickCartLink(){
+        await this.driver.findElement(this.cart_link).click()
     }
 
     async getInventoryItems() {
@@ -106,6 +129,17 @@ class InventoryPage{
         }
 
         return JSON.stringify(actual) === JSON.stringify(expected);
+    }
+
+    async addToCart(item_to_add){
+        const items = await this.getInventoryItems();
+        for(const item of items){
+            if(item.name.trim().toLowerCase() === item_to_add.trim().toLowerCase()){
+                await item.add_to_cart.click();
+                return;
+            }
+        }
+        throw new Error(`${item_to_add} not found in the Inventory page`);
     }
 }
 
