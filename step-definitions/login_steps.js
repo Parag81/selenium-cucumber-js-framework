@@ -30,7 +30,6 @@ Given(/Enter the credentials to login as (.*)$/,
 Given(/Validate the user is logged in$/,
     async function () {
         const url = await this.driver.getCurrentUrl();
-        console.log(url);
         assert.strictEqual(
             url,
             "https://www.saucedemo.com/inventory.html"

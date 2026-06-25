@@ -28,3 +28,10 @@ Given(/Validate the product "(.*)" (is|is not) available in cart$/,
             throw new Error(`${product_name} is not present in the cart`);
         }
     })
+
+Given(/Go to checkout$/,
+    async function ()  {
+        const cart_page = new CartPage(this.driver);
+        await cart_page.clickCheckout();
+        await this.driver.sleep(500);
+    })

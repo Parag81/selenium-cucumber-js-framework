@@ -32,11 +32,13 @@ selenium-cucumber-js-framework
 │   ├── login_steps.js
 │   └── inventory_steps.js
 │   └── cart_steps.js
+│   └── checkout_steps.js
 │
 ├── pages
 │   ├── login_page.js
 │   └── inventory_page.js
-│   └── cart.js
+│   └── cart_page.js
+│   └── checkout_page.js
 │
 ├── support
 │   └── hooks.js
@@ -72,6 +74,13 @@ selenium-cucumber-js-framework
 ### Cart Module
 
 - Verify Products are Added in Cart
+- Checkout Products
+- 
+### Checkout Module
+
+- Adding Address Details in the Checkout
+- Verify the Item Total, Tax, Total Price
+- Verify Order is placed
 
 
 ## Installation
@@ -111,6 +120,7 @@ Maps Gherkin steps to automation code.
 - login_steps.js
 - inventory_steps.js
 - cart_steps.js
+- checkout_steps.js
 
 ### Page Objects
 Contains locators and reusable methods following the Page Object Model (POM).
@@ -118,6 +128,7 @@ Contains locators and reusable methods following the Page Object Model (POM).
 - login_page.js
 - inventory_page.js
 - cart_page.js
+- checkout_page.js
 
 ### Hooks
 Handles framework setup and teardown activities.
@@ -145,7 +156,7 @@ Reusable helper classes and browser configuration.
 Parag Khare
 
 LinkedIn:
-https://linkedin.com/in/parag-khare
+https://linkedin.com/in/parag-khare-573ab0206
 
 GitHub:
 https://github.com/Parag81

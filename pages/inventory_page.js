@@ -3,6 +3,7 @@ const { By, Key } = require("selenium-webdriver");
 class InventoryPage{
     constructor(driver){
         this.driver = driver;
+        this.title = By.css("span.title");
         this.items = By.css("div.inventory_list div.inventory_item");
         this.filters = By.css("select.product_sort_container");
         this.filter_options = By.css("select.product_sort_container option");
@@ -10,6 +11,10 @@ class InventoryPage{
         this.cart_count = By.css("a.shopping_cart_link span");
         this.menu_button = By.css("button#react-burger-menu-btn");
         this.logout_button = By.css("a#logout_sidebar_link");
+    }
+
+    async getTitle(){
+        return await this.driver.findElement(this.title).getText();
     }
 
     async clickMenuButton(){

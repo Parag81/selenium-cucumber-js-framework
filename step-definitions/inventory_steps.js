@@ -3,6 +3,16 @@ const { Given } = require("@cucumber/cucumber");
 const assert = require("assert");
 
 const InventoryPage = require("../pages/inventory_page");
+const CartPage = require("../pages/cart_page");
+
+Given(/Validate the Inventory page is displayed$/,
+    async function ()  {
+        const inventory_page = new InventoryPage(this.driver);
+        assert.strictEqual(
+            await inventory_page.getTitle(),
+            "Products"
+        );
+    })
 
 Given(/Validate the count of items in inventory is (.*)/,
     async function (expected_count)  {

@@ -5,10 +5,15 @@ class CartPage{
         this.driver = driver;
         this.title = By.css("span.title");
         this.cart_list = By.css("div.cart_list div.cart_item");
+        this.checkout = By.css("button#checkout");
     }
 
     async getTitle(){
         return await this.driver.findElement(this.title).getText();
+    }
+
+    async clickCheckout(){
+        await this.driver.findElement(this.checkout).click();
     }
 
     async getCartItems() {
