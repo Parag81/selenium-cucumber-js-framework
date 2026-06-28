@@ -1,0 +1,1221 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "shopping-cart;adding-product-in-cart,-remove-the-product-and-validating-the-products",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Adding product in Cart, Remove the product and validating the products",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 826943499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 3,
+            "name": "User is on the login page",
+            "match": {
+              "location": "step-definitions\\login_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 601731200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 4,
+            "name": "Enter the credentials to login as {\"username\": \"standard_user\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4817612699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 5,
+            "name": "Validate the user is logged in",
+            "match": {
+              "location": "step-definitions\\login_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5763800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 6,
+            "name": "Add the item \"Sauce Labs Backpack\" in the cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 406330199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 7,
+            "name": "Add the item \"Sauce Labs Bike Light\" in the cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 355527000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 8,
+            "name": "Open shopping cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1090146399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 9,
+            "name": "Validate the Cart page is opened",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21535400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 10,
+            "name": "Validate the product \"Sauce Labs Backpack\" is available in cart",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104142799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 11,
+            "name": "Validate the product \"Sauce Labs Bike Light\" is available in cart",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111348599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 12,
+            "name": "Validate the product \"Sauce Labs Bolt T-Shirt\" is not available in cart",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110973099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 13,
+            "name": "Remove the product \"Sauce Labs Bike Light\" from the cart",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150518599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 14,
+            "name": "Validate the product \"Sauce Labs Bike Light\" is not available in cart",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58092400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 15,
+            "name": "Logout",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1163789500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 59383700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "shopping-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Shopping Cart",
+    "tags": [],
+    "uri": "features\\cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "checkout;check-out-the-items-that-are-in-the-cart-and-validate-the-order-is-places",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Check out the items that are in the cart and validate the order is places",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 908007000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 3,
+            "name": "User is on the login page",
+            "match": {
+              "location": "step-definitions\\login_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 466603399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 4,
+            "name": "Enter the credentials to login as {\"username\": \"standard_user\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4519671800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 5,
+            "name": "Validate the user is logged in",
+            "match": {
+              "location": "step-definitions\\login_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9042300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 6,
+            "name": "Add the item \"Sauce Labs Backpack\" in the cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 465675999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 7,
+            "name": "Add the item \"Sauce Labs Bike Light\" in the cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 422937000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 8,
+            "name": "Open shopping cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1095016199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 9,
+            "name": "Go to checkout",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 588514999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 10,
+            "name": "Fill the details in the checkout page with \"{\"first_name\": \"Parag\", \"last_name\": \"Khare\", \"postal_code\": \"1000\"}\"",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1319245300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 11,
+            "name": "Validate the UI item total, tax and total amount is as per the items added",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 148223099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 12,
+            "name": "Click on the Finish button",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1083440000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 13,
+            "name": "Validate the Order placed message \"Thank you for your order! Your order has been dispatched, and will arrive just as fast as the pony can get there!\"",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38797999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 14,
+            "name": "Go back to the products",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 588915400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 15,
+            "name": "Validate the Inventory page is displayed",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20202399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 16,
+            "name": "Logout",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1181518400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 76140899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "checkout",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Checkout",
+    "tags": [],
+    "uri": "features\\checkout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "end-to-end-coverage;login-in-the-application,-add-product-to-the-cart,-checkout-the-product",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Login in the application, add product to the cart, checkout the product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 843744399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 3,
+            "name": "User is on the login page",
+            "match": {
+              "location": "step-definitions\\login_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 479054900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 4,
+            "name": "Enter the credentials to login as {\"username\": \"standard_user\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4572698899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 5,
+            "name": "Validate the user is logged in",
+            "match": {
+              "location": "step-definitions\\login_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5523199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 6,
+            "name": "Add the item \"Sauce Labs Backpack\" in the cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 389079500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 7,
+            "name": "Open shopping cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1104946799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 8,
+            "name": "Validate the product \"Sauce Labs Backpack\" is available in cart",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63814200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 9,
+            "name": "Go to checkout",
+            "match": {
+              "location": "step-definitions\\cart_steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 588091499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 10,
+            "name": "Fill the details in the checkout page with \"{\"first_name\": \"Parag\", \"last_name\": \"Khare\", \"postal_code\": \"1000\"}\"",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1289225699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 11,
+            "name": "Click on the Finish button",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1087376400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 12,
+            "name": "Validate the Order placed message \"Thank you for your order! Your order has been dispatched, and will arrive just as fast as the pony can get there!\"",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39571800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 13,
+            "name": "Go back to the products",
+            "match": {
+              "location": "step-definitions\\checkout_steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 583269199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 14,
+            "name": "Validate the Inventory page is displayed",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24276000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 15,
+            "name": "Logout",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1149882000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 72240099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "end-to-end-coverage",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "End to End Coverage",
+    "tags": [],
+    "uri": "features\\end_to_end_flow.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "inventory;validate-the-inventory-items-count-and-sorting-functionalities",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Validate the inventory items count and sorting functionalities",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 836385900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 3,
+            "name": "User is on the login page",
+            "match": {
+              "location": "step-definitions\\login_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 511894299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 4,
+            "name": "Enter the credentials to login as {\"username\": \"standard_user\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4500908499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 5,
+            "name": "Validate the user is logged in",
+            "match": {
+              "location": "step-definitions\\login_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7231399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 6,
+            "name": "Validate the Inventory page is displayed",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27687200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 7,
+            "name": "Validate the count of items in inventory is 6",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11365899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 8,
+            "name": "Validate that the price for item Sauce Labs Backpack is $29.99",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 317820500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 9,
+            "name": "Sort the Inventory list with filter NAME_ASC and validate the list",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1484375299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 10,
+            "name": "Sort the Inventory list with filter NAME_DESC and validate the list",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1440625500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 11,
+            "name": "Sort the Inventory list with filter PRICE_ASC and validate the list",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1432190000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 12,
+            "name": "Sort the Inventory list with filter PRICE_DESC and validate the list",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1492484399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 13,
+            "name": "Logout",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1191941500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 100126000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "inventory;add-items-in-cart-and-validate-the-count-in-the-inventory-page",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Add items in cart and validate the count in the inventory page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 840671799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 16,
+            "name": "User is on the login page",
+            "match": {
+              "location": "step-definitions\\login_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 493362300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 17,
+            "name": "Enter the credentials to login as {\"username\": \"standard_user\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4530536000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 18,
+            "name": "Validate the user is logged in",
+            "match": {
+              "location": "step-definitions\\login_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7895100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 19,
+            "name": "Add the item \"Sauce Labs Backpack\" in the cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 432684399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 20,
+            "name": "Add the item \"Sauce Labs Bike Light\" in the cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 391964299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 21,
+            "name": "Validate the cart count in Inventory page as 2",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24112299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 22,
+            "name": "Add the item \"Test.allTheThings() T-Shirt (Red)\" in the cart",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 404877800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 23,
+            "name": "Validate the cart count in Inventory page as 3",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18551899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 24,
+            "name": "Logout",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1182933400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 78880499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "inventory",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Inventory",
+    "tags": [],
+    "uri": "features\\inventory.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-in-the-website-and-validate-the-login-scenarios;validate-successful-login",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Validate Successful Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 951748899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 3,
+            "name": "User is on the login page",
+            "match": {
+              "location": "step-definitions\\login_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 638925100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 4,
+            "name": "Enter the credentials to login as {\"username\": \"standard_user\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4556979599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 5,
+            "name": "Validate the user is logged in",
+            "match": {
+              "location": "step-definitions\\login_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4847499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 6,
+            "name": "Logout",
+            "match": {
+              "location": "step-definitions\\inventory_steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1166360300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 74883299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-in-the-website-and-validate-the-login-scenarios;validate-the-scenarios-for-invalid-username-and-password",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Validate the Scenarios for Invalid Username and Password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 843862500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 9,
+            "name": "User is on the login page",
+            "match": {
+              "location": "step-definitions\\login_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 492603600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 11,
+            "name": "Enter the credentials to login as {\"username\": \"invalid_username\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4487300499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 12,
+            "name": "Validate the error on the Login page with \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "step-definitions\\login_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25289899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 14,
+            "name": "Enter the credentials to login as {\"username\": \"standard_user\", \"password\": \"invalid_password\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4369517800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 15,
+            "name": "Validate the error on the Login page with \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "step-definitions\\login_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18890499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 17,
+            "name": "Enter the credentials to login as {\"username\": \"\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4360791799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 18,
+            "name": "Validate the error on the Login page with \"Epic sadface: Username is required\"",
+            "match": {
+              "location": "step-definitions\\login_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18960400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 20,
+            "name": "Enter the credentials to login as {\"username\": \"standard_user\", \"password\": \"\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4443523100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 21,
+            "name": "Validate the error on the Login page with \"Epic sadface: Password is required\"",
+            "match": {
+              "location": "step-definitions\\login_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26767600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 23,
+            "name": "Enter the credentials to login as {\"username\": \"locked_out_user\", \"password\": \"secret_sauce\"}",
+            "match": {
+              "location": "step-definitions\\login_steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4422965799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 24,
+            "name": "Validate the error on the Login page with \"Epic sadface: Sorry, this user has been locked out.\"",
+            "match": {
+              "location": "step-definitions\\login_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15093500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 75815099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-in-the-website-and-validate-the-login-scenarios",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login in the website and validate the Login scenarios",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]

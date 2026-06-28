@@ -1,5 +1,5 @@
 Feature: Shopping Cart
-  Scenario: Adding items in Cart and validating the products
+  Scenario: Adding product in Cart, Remove the product and validating the products
     * User is on the login page
     * Enter the credentials to login as {"username": "standard_user", "password": "secret_sauce"}
     * Validate the user is logged in
@@ -10,11 +10,6 @@ Feature: Shopping Cart
     * Validate the product "Sauce Labs Backpack" is available in cart
     * Validate the product "Sauce Labs Bike Light" is available in cart
     * Validate the product "Sauce Labs Bolt T-Shirt" is not available in cart
-    * Go to checkout
-    * Fill the details in the checkout page with "{"first_name": "Parag", "last_name": "Khare", "postal_code": "1000"}"
-    * Validate the UI item total, tax and total amount is as per the items added
-    * Click on the Finish button
-    * Validate the Order placed message "Thank you for your order! Your order has been dispatched, and will arrive just as fast as the pony can get there!"
-    * Go back to the products
-    * Validate the Inventory page is displayed
+    * Remove the product "Sauce Labs Bike Light" from the cart
+    * Validate the product "Sauce Labs Bike Light" is not available in cart
     * Logout

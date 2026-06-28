@@ -35,3 +35,17 @@ Given(/Go to checkout$/,
         await cart_page.clickCheckout();
         await this.driver.sleep(500);
     })
+
+Given(/Remove the product "(.*)" from the cart$/,
+    async function (product_name)  {
+        const cart_page = new CartPage(this.driver);
+        const products = await cart_page.getCartItems();
+        for(const product of products){
+            if(product.name === product_name){
+                await product.remove.click();
+                return;
+            }
+        }
+        throw new Error(`${product_name} is not present in the cart`);
+
+    })
