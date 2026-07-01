@@ -4,15 +4,22 @@ on:
   push:
     branches:
       - main
-
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  ui-tests:
+  selenium-tests:
     runs-on: ubuntu-latest
 
-    steps:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
+    steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -24,18 +31,23 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Install Google Chrome
+      - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
 
       - name: Verify Chrome
         run: chrome --version
 
-      - name: Run Selenium tests and Generate HTML Report
+      - name: Run Automation Tests
         run: npm run test-report
 
-      - name: Upload Report
-        uses: actions/upload-artifact@v4
-        if: always()
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: Automation-Report
-          path: reports/
+          path: reports/html-report
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
