@@ -37,12 +37,9 @@ jobs:
       - name: Verify Chrome
         run: chrome --version
 
-      - name: Run Automation Tests
+      - name: Run Automation Tests and Generate report
         id: tests
-        run: npm test
-
-      - name: Generate HTML Report
-        run: npm run report
+        run: npm run test-report
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
