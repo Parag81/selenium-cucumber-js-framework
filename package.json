@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js features/**/*.feature --require step-definitions/**/*.js",
+    "test": "cucumber-js features/**/*.feature --require step-definitions/**/*.js --require support/**/*.js --format progress --format json:reports/cucumber-report/cucumber.json",
+    "report": "node report.js",
+    "test-report": "npm run test & npm run report",
     "wdio": "wdio run ./wdio.conf.ts"
   },
   "private": true,
@@ -13,12 +15,13 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@cucumber/cucumber": "^13.0.0",
     "chromedriver": "^149.0.3",
     "selenium-webdriver": "^4.45.0"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^13.0.0",
     "@wdio/cli": "^9.28.0",
-    "@wdio/local-runner": "^9.28.0"
+    "@wdio/local-runner": "^9.28.0",
+    "multiple-cucumber-html-reporter": "^3.8.0"
   }
 }
