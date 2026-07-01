@@ -4,6 +4,7 @@ const assert = require("assert");
 
 const CheckoutPage = require("../pages/checkout_page");
 const CartPage = require("../pages/cart_page");
+const LoginPage = require("../pages/login_page");
 
 Given(/Fill the details in the checkout page with "(.*)"$/,
     async function (json_data)  {
@@ -18,6 +19,16 @@ Given(/Fill the details in the checkout page with "(.*)"$/,
 
         await this.driver.sleep(1000);
     })
+
+Given(/Validate the error on the Checkout page with "(.*)"$/,
+    async function (expected_error) {
+        const checkout_page = await new CheckoutPage(this.driver);
+        const error = await this.driver.findElement(await checkout_page.error);
+        assert.strictEqual(
+            await error.getText(),
+            expected_error
+        );
+    });
 
 Given(/Validate the UI item total, tax and total amount is as per the items added$/,
     async function ()  {

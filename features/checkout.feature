@@ -1,4 +1,20 @@
 Feature: Checkout
+  Scenario: Validate the address details scenarios with empty names and empty postal code
+    * User is on the login page
+    * Enter the credentials to login as {"username": "standard_user", "password": "secret_sauce"}
+    * Validate the user is logged in
+    * Add the item "Sauce Labs Backpack" in the cart
+    * Add the item "Sauce Labs Bike Light" in the cart
+    * Open shopping cart
+    * Go to checkout
+    * Fill the details in the checkout page with "{"first_name": "", "last_name": "", "postal_code": ""}"
+    * Validate the error on the Checkout page with "Error: First Name is required"
+    * Fill the details in the checkout page with "{"first_name": "Parag", "last_name": "", "postal_code": ""}"
+    * Validate the error on the Checkout page with "Error: Last Name is required"
+    * Fill the details in the checkout page with "{"first_name": "Parag", "last_name": "Khare", "postal_code": ""}"
+    * Validate the error on the Checkout page with "Error: Postal Code is required"
+    * Logout
+
   Scenario: Check out the items that are in the cart and validate the order is places
     * User is on the login page
     * Enter the credentials to login as {"username": "standard_user", "password": "secret_sauce"}

@@ -15,6 +15,7 @@ class CheckoutPage {
         this.order_completed = By.className("complete-header");
         this.order_completed_message = By.className("complete-text");
         this.back_home = By.id("back-to-products");
+        this.error = By.css('h3[data-test="error"]');
     }
 
     async setFirstName(first_name) {
